@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
+
     fun onClickTest(view: View){
         val tvTest = findViewById<TextView>(R.id.tvTest)
         tvTest.text = "privet"
