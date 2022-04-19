@@ -4,6 +4,7 @@ package com.maxim.makso
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import com.maxim.makso.constance.Constance
@@ -15,12 +16,15 @@ class SignInUpAct : AppCompatActivity() {
     lateinit var bindingClass: ActivitySignUpInBinding
     private var signState = "empty"
 
+    private val TAG = "MYTESTTTTTTT"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bindingClass = ActivitySignUpInBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
         signState = intent.getStringExtra(Constance.SIGN_STATE)!!
+        Log.d(TAG, "state = $signState")
 
         if (signState == Constance.SIGN_IN_STATE)
             bindingClass.bAvatar.visibility = View.INVISIBLE
@@ -31,6 +35,10 @@ class SignInUpAct : AppCompatActivity() {
     fun onClickDone(view: View) {
         if (signState == Constance.SIGN_UP_STATE) {
             val intent = Intent()
+
+            Log.d(TAG, " login = ${bindingClass.edLogin.text.toString()}")
+            Log.d(TAG, " password = ${bindingClass.edPassword.text.toString()}")
+
             intent.putExtra(Constance.LOGIN, bindingClass.edLogin.text.toString())
             intent.putExtra(Constance.PASSWORD, bindingClass.edPassword.text.toString())
             if (bindingClass.imAvatar.isVisible) intent.putExtra(

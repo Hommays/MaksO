@@ -7,19 +7,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/bExit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/sing_in"
-        android:onClick="onCLickSignIn"
-        app:layout_constraintBottom_toTopOf="@+id/bHide"
-        app:layout_constraintEnd_toEndOf="@+id/bHide"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/bHide"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/bHide"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -52,4 +39,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Button
+        android:id="@+id/bExit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCLickSignIn"
+        android:text="@string/sing_in"
+        app:layout_constraintBottom_toTopOf="@+id/bHide"
+        app:layout_constraintEnd_toEndOf="@+id/bHide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bHide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
